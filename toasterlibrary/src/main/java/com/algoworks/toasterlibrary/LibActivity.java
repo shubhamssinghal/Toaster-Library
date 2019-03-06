@@ -33,7 +33,6 @@ public class LibActivity extends AppCompatActivity {
 
     }
 
-
     public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2,final EditText edt3)
     {
         a=Integer.parseInt(edt1.getText().toString());
