@@ -22,41 +22,45 @@ public class LibActivity extends AppCompatActivity {
         edt2=findViewById(R.id.edt2);
         btn1=findViewById(R.id.btn1);
 
+        btn1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                buttonClick(btn1,edt1,edt2);
+            }
+        });
+
     }
 
 
     public void buttonClick(Button btn1, final EditText edt1, final EditText edt2)
     {
-        btn1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+        {
+
+            if (edt1.getText().toString().equalsIgnoreCase(""))
+            {
+                Toast.makeText(LibActivity.this, "Enter first number", Toast.LENGTH_SHORT).show();
+            }
+            else
+            {
+                a=Integer.parseInt(edt1.getText().toString());
 
                 if (edt1.getText().toString().equalsIgnoreCase(""))
                 {
-                    Toast.makeText(LibActivity.this, "Enter first number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(LibActivity.this, "Enter second number", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
-                    a=Integer.parseInt(edt1.getText().toString());
+                    b=Integer.parseInt(edt2.getText().toString());
 
-                    if (edt1.getText().toString().equalsIgnoreCase(""))
-                    {
-                        Toast.makeText(LibActivity.this, "Enter second number", Toast.LENGTH_SHORT).show();
-                    }
-                    else
-                    {
-                        b=Integer.parseInt(edt2.getText().toString());
-
-                        c=a+b;
-                        Toast.makeText(LibActivity.this, "Sum : "+c, Toast.LENGTH_SHORT).show();
-                    }
-
+                    c=a+b;
+                    Toast.makeText(LibActivity.this, "Sum : "+c, Toast.LENGTH_SHORT).show();
                 }
 
-
-
             }
-        });
+
+
+
+        }
 
     }
 
