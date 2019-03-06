@@ -27,14 +27,14 @@ public class LibActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonClick(LibActivity.this,btn1,edt1,edt2);
+                buttonClick(LibActivity.this,btn1,edt1,edt2,edt3);
             }
         });
 
     }
 
 
-    public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2)
+    public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2,final EditText edt3)
     {
         a=Integer.parseInt(edt1.getText().toString());
         b=Integer.parseInt(edt2.getText().toString());
