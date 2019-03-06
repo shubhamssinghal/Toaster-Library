@@ -35,9 +35,7 @@ public class LibActivity extends AppCompatActivity {
 
     public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2)
     {
-        {
-
-            if (edt1.getText().toString().equalsIgnoreCase(""))
+        { if (edt1.getText().toString().equalsIgnoreCase(""))
             {
                 Toast.makeText(context, "Enter first number", Toast.LENGTH_SHORT).show();
             }
