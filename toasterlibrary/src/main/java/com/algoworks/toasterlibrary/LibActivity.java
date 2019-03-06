@@ -13,7 +13,8 @@ public class LibActivity extends AppCompatActivity {
 
     EditText edt1,edt2,edt3;
     Button btn1;
-    int a,b,c;
+    String a,b,c;
+    int d;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,39 +28,40 @@ public class LibActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonClick(LibActivity.this,btn1,edt1,edt2,edt3);
+                buttonClick(LibActivity.this,edt1,edt2,edt3);
             }
         });
 
     }
 
-    public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2,final EditText edt3)
+    public void buttonClick(Context context, final EditText edt1, final EditText edt2,final EditText edt3)
     {
-        a=Integer.parseInt(edt1.getText().toString());
-        b=Integer.parseInt(edt2.getText().toString());
-            if (edt1.getText().toString().equalsIgnoreCase(""))
+        a=edt1.getText().toString();
+        b=edt2.getText().toString();
+        c=edt3.getText().toString();
+            if (a.equalsIgnoreCase(""))
             {
                 Toast.makeText(context, "Enter first number", Toast.LENGTH_SHORT).show();
                 edt1.requestFocus();
             }
             else
             {
-                if (edt2.getText().toString().equalsIgnoreCase(""))
+                if (b.equalsIgnoreCase(""))
                 {
                     Toast.makeText(context, "Enter second number", Toast.LENGTH_SHORT).show();
                     edt2.requestFocus();
                 }
                 else
                 {
-                    if (edt3.getText().toString().equalsIgnoreCase(""))
+                    if (c.equalsIgnoreCase(""))
                     {
                         Toast.makeText(context, "Enter third number", Toast.LENGTH_SHORT).show();
                         edt3.requestFocus();
                     }
                     else
                     {
-                        c=a+b;
-                        Toast.makeText(context, "Sum : "+c, Toast.LENGTH_SHORT).show();
+                        d=Integer.parseInt(a)+Integer.parseInt(b)+Integer.parseInt(c);
+                        Toast.makeText(context, "Sum : "+d, Toast.LENGTH_SHORT).show();
                     }
 
                 }
