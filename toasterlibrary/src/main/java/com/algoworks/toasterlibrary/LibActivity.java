@@ -1,5 +1,6 @@
 package com.algoworks.toasterlibrary;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -25,20 +26,20 @@ public class LibActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                buttonClick(btn1,edt1,edt2);
+                buttonClick(LibActivity.this,btn1,edt1,edt2);
             }
         });
 
     }
 
 
-    public void buttonClick(Button btn1, final EditText edt1, final EditText edt2)
+    public void buttonClick(Context context, Button btn1, final EditText edt1, final EditText edt2)
     {
         {
 
             if (edt1.getText().toString().equalsIgnoreCase(""))
             {
-                Toast.makeText(LibActivity.this, "Enter first number", Toast.LENGTH_SHORT).show();
+                Toast.makeText(context, "Enter first number", Toast.LENGTH_SHORT).show();
             }
             else
             {
@@ -46,14 +47,14 @@ public class LibActivity extends AppCompatActivity {
 
                 if (edt1.getText().toString().equalsIgnoreCase(""))
                 {
-                    Toast.makeText(LibActivity.this, "Enter second number", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Enter second number", Toast.LENGTH_SHORT).show();
                 }
                 else
                 {
                     b=Integer.parseInt(edt2.getText().toString());
 
                     c=a+b;
-                    Toast.makeText(LibActivity.this, "Sum : "+c, Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, "Sum : "+c, Toast.LENGTH_SHORT).show();
                 }
 
             }
