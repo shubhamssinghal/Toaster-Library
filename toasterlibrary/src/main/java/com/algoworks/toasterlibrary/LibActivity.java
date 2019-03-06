@@ -22,6 +22,11 @@ public class LibActivity extends AppCompatActivity {
         edt2=findViewById(R.id.edt2);
         btn1=findViewById(R.id.btn1);
 
+    }
+
+
+    public void buttonClick(Button btn1, final EditText edt1, final EditText edt2)
+    {
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -54,4 +59,5 @@ public class LibActivity extends AppCompatActivity {
         });
 
     }
+
 }
