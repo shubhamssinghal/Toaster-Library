@@ -15,6 +15,7 @@ public class LibActivity extends AppCompatActivity {
     Button btn1;
     String a,b,c;
     int d;
+    int num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
